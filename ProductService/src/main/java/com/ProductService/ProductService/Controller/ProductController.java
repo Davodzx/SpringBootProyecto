@@ -51,7 +51,7 @@ public class ProductController {
         return ResponseEntity.ok(product);
    }
 
-   @GetMapping("findByName")
+   @GetMapping("/findByName")
    public Product getProductName (@RequestParam String name){
         return productRepository.findByName(name);
    }
@@ -62,7 +62,7 @@ public class ProductController {
         return ResponseEntity.ok(updateProduct);
    }
 
-   @GetMapping("AllProducts")
+   @GetMapping("/AllProducts")
     public ResponseEntity<List<Product>> getAllProducts(){
         List<Product> products = productService.getAllProducts();
         return ResponseEntity.ok(products);
